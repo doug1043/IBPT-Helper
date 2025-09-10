@@ -1,0 +1,22 @@
+services:
+  ibpt-bot:
+    image: ibpt-bot:latest
+    container_name: ibpt-bot
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - TZ=${TZ:-America/Sao_Paulo}
+      - CRON_SCHEDULE=${CRON_SCHEDULE:-0 7 * * *}
+      - URL_IBPT=${URL_IBPT}
+      - IBPT_USERNAME=${IBPT_USERNAME}
+      - IBPT_PASSWORD=${IBPT_PASSWORD}
+      - CNPJ_EMPRESA=${CNPJ_EMPRESA}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_BOT_USERNAME=${TELEGRAM_BOT_USERNAME}
+      - ADMIN_IDS=${ADMIN_IDS}
+      - ESTADOS=${ESTADOS}
+      - MAX_ATTEMPTS=${MAX_ATTEMPTS:-30}
+      - DELAY_SECONDS=${DELAY_SECONDS:-10}
+      - ENABLE_DEBUG=${ENABLE_DEBUG:-true}

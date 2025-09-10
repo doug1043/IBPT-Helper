@@ -1,0 +1,51 @@
+# Git
+.git
+.gitignore
+
+# Arquivos de ambiente
+.env
+env.example
+
+# Arquivos Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos de log e dados (serão criados dentro do container)
+logs/
+data/
+
+# Arquivos Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Scripts de build
+build-image.sh
+
+# Documentação
+README*.md
+
+# Outros
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log 
